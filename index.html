@@ -279,6 +279,23 @@
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-友链">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/links/" rel="section"><i class="menu-item-icon fa fa-fw fa-link"></i> <br>友链</a>
+
+  </li>
 
       
       
@@ -373,7 +390,7 @@
                 
               
 
-              <time title="创建时间：2019-05-25 11:14:27 / 修改时间：11:16:29" itemprop="dateCreated datePublished" datetime="2019-05-25T11:14:27+08:00">2019-05-25</time>
+              <time title="创建时间：2019-05-25 11:14:27 / 修改时间：11:36:09" itemprop="dateCreated datePublished" datetime="2019-05-25T11:14:27+08:00">2019-05-25</time>
             
 
             
@@ -413,8 +430,7 @@
 
       
         
-          
-            <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h3 id="事件背景"><a href="#事件背景" class="headerlink" title="事件背景"></a>事件背景</h3><p>最近我们公司想要用 vue 框架来重构之前的用 angular 框架的项目，对于笔者来说是第一次接触 MVVM 模式的框架，所以花在数据绑定逻辑上的时间比较多，经过一周代码开发，渐渐熟悉了数据绑定的使用，趁着印象深刻，赶紧写一篇博文记录一下。 By the way，这是我第一篇博文，应该也没有人看的，但是还是有点小紧张，像一个小学生第一次站上讲台似的，哈哈哈。</p>
+          <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h3 id="事件背景"><a href="#事件背景" class="headerlink" title="事件背景"></a>事件背景</h3><p>最近我们公司想要用 vue 框架来重构之前的用 angular 框架的项目，对于笔者来说是第一次接触 MVVM 模式的框架，所以花在数据绑定逻辑上的时间比较多，经过一周代码开发，渐渐熟悉了数据绑定的使用，趁着印象深刻，赶紧写一篇博文记录一下。 By the way，这是我第一篇博文，应该也没有人看的，但是还是有点小紧张，像一个小学生第一次站上讲台似的，哈哈哈。</p>
 <h3 id="技术背景"><a href="#技术背景" class="headerlink" title="技术背景"></a>技术背景</h3><p>前端使用vue（vuex + vue-router） + element-ui + stylus +webpack，后端使用 GO 语言编写，并用 RESTful 风格的接口交互，其中接口使用 Swagger 进行可视化展示。 </p>
 <blockquote>
 <p> REST是Representational State Transfer的缩写，它是由罗伊·菲尔丁（Roy Fielding）提出的，是用来描述创建HTTP API的标准方法的，他发现这四种常用的行为（查看（view），创建（create），编辑（edit）和删除（delete））都可以直接映射到HTTP 中已实现的GET,POST,PUT和DELETE方法。</p>
@@ -422,59 +438,15 @@
 <blockquote>
 <p> Swagger 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务。</p>
 </blockquote>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在未使用 vue 之前，我已经知道了 vue 只要对已经和 html 标签绑定的数据进行修改，dom 对象也会随之发生视图变化。但是在第一天的开发中我遇到了数据更新但是视图没有更新的情况，在排除了数据问题之后，很明显，锅出在了数据绑定的机制上。由于使用了 Element-Ui (也是初次接触) UI 框架，数据的绑定机制多了 element-ui 的影响，使得问题更加复杂化。</p>
-<blockquote>
-<p>Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库。 <a href="https://element.eleme.cn/" target="_blank" rel="noopener">https://element.eleme.cn/</a></p>
-</blockquote>
-<p>接下来让笔者从两个问题入手，试图对使用 结合 element-ui 的 vue 框架下的开发经验进行总结：</p>
-<p><strong>1. 单纯使用 vue 框架时如何进行正确的数据绑定？</strong></p>
-<p><strong>2. 结合使用 element-ui UI框架时在数据绑定上可能遇到的问题和注意事项？</strong></p>
-<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><h3 id="1-单纯使用-vue-框架时如何进行正确的数据绑定？"><a href="#1-单纯使用-vue-框架时如何进行正确的数据绑定？" class="headerlink" title="1.单纯使用 vue 框架时如何进行正确的数据绑定？"></a>1.单纯使用 vue 框架时如何进行正确的数据绑定？</h3><p>使用过 vue 的程序员都知道只要更新在 vue 对象的 data 属性中的对象或者 vue 组件的data()方法返回的数据对象，那相应的绑定位置的视图也会随之改变。<br>这是基于 vue 响应式原理的逻辑的前提的，也就是说<strong>只有在data里初始化的数据才是响应的，Vue不能检测到对象属性的添加或删除，没有在data里声明的属性不是响应的。</strong></p>
-<blockquote>
-<p><strong>官方对深入响应式原理的解释</strong>：当你把一个普通的 JavaScript 对象传入 Vue 实例作为 data 选项，Vue 将遍历此对象所有的属性，并使用 Object.defineProperty 把这些属性全部转为 getter/setter。Object.defineProperty 是 ES5 中一个无法 shim 的特性，这也就是 Vue 不支持 IE8 以及更低版本浏览器的原因。</p>
-</blockquote>
-<p>这就要求我们把在对 vue 对象中的 data 和 vue 组件中的 data() 中的数据进行初始化的时候尽量写出完整的属性。</p>
-<ul>
-<li>那么当我们需要对一个变化的对象进行绑定的时候我们该怎么做呢？<br>最简单的方式是对显示申明的部分进行重新赋值，如：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      obj: &#123;&#125;, //data中只是简单的对obj进行初始化</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  ……</span><br><span class="line">  </span><br><span class="line">  //这个两个赋值语句确实改变了data中obj对象，但是绑定的视图没有发生改变</span><br><span class="line">  this.obj.id=1;</span><br><span class="line">  this.obj.name=&quot;李宪杰&quot;;</span><br><span class="line">  </span><br><span class="line">  //我们需要对data中显式初始化的对象进行重新赋值以触发响应</span><br><span class="line">  let tempObj=this.obj;</span><br><span class="line">  this.obj=tempObj;//此时触发了setter操作</span><br></pre></td></tr></table></figure>
-<ul>
-<li>但是更多的时候在data中初始化的对象已经有一些属性存在，此时若对整个对象进行重新赋值显得有点浪费，我们使用 vue 提供的 $set方法将相应属性动态添加到嵌套的对象上，如：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      obj: &#123;</span><br><span class="line">          id：1，</span><br><span class="line">          name:&quot;李宪杰&quot;,</span><br><span class="line">          </span><br><span class="line">      &#125;, //obj已经有一些初始化的属性了，本例只是演示，现实中的使用场景更加复杂</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  ……</span><br><span class="line">  </span><br><span class="line">  //绑定的视图没有发生改变</span><br><span class="line">  this.obj.age=18;</span><br><span class="line">  </span><br><span class="line">  //动态添加以触发响应</span><br><span class="line">  this.$set(this.obj,age,18);//此时触发了setter操作</span><br></pre></td></tr></table></figure>
-<ul>
-<li>使用this.$set或者Vue.set是更加常见的方式，但是每次只能对对象的一个属性，或者数组的一个对象进行set。那么有没有可以对多个属性进行动态添加的方法呢？那就要提到 Object.assign() 了，下面我们用代码来看一下这个方法的使用方式：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      obj: &#123;</span><br><span class="line">          id：1，</span><br><span class="line">          </span><br><span class="line">      &#125;, //obj已经有一些初始化的属性了，本例只是演示，现实中的使用场景更加复杂</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  ……</span><br><span class="line">  </span><br><span class="line">  //使用Object.assign()动态添加以触发响应</span><br><span class="line">  this.obj = Object.assign( &#123; &#125; , this.object , &#123;name:&apos;李宪杰&apos;, age:18 &#125;);</span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>注意：</strong>  当使用Object.assgin()对data中的数组进行动态添加元素时，会将数组类型转为Object类型,而使用this.$set()则不会改变数组。</li>
-</ul>
-<p>关于数组的数据更新，Vue检测不到的变动有：<br><strong>1.利用索引直接设置一个项；</strong><br><strong>2.修改数组长度。</strong><br>Vue能检测到的变动有以下方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">push()</span><br><span class="line">pop()</span><br><span class="line">shift()</span><br><span class="line">unshift()</span><br><span class="line">splice()</span><br><span class="line">sort()</span><br><span class="line">reverse()</span><br></pre></td></tr></table></figure>
-<h3 id="2-结合使用-element-ui-UI框架时在数据绑定上可能遇到的问题和注意事项？"><a href="#2-结合使用-element-ui-UI框架时在数据绑定上可能遇到的问题和注意事项？" class="headerlink" title="2. 结合使用 element-ui UI框架时在数据绑定上可能遇到的问题和注意事项？"></a>2. 结合使用 element-ui UI框架时在数据绑定上可能遇到的问题和注意事项？</h3><p>根据我的使用经验，大多情况下 element-ui 组件中绑定的数据是很敏感的，基本能够随 data 中数据的改变而更新视图（具体原理暂未研究）。所以，只要充分的阅读文档，使用起来是相当方便的。</p>
-<p>However……跟着文档实现的过程中我还是遇到了一些视图不更新的坑，经过对 Vue 数据的显示setter操作之后还是存在，基本确定是element-ui本身的问题或者特性。以下是本人实际开发中的理解，如果有误，请不吝赐教。</p>
-<ul>
-<li><strong>el-checkbox 复选框中更新checked，视图不更新的问题。</strong>  </li>
-</ul>
-<p>这个问题困扰了我很久，原因是我一直从数据是否更新和 vue 是否检测到数据更新的角度思考。经过长时间的测试，我发现这个属性并不能动态改变复选框的选中状态，它更像是复选框的预选状态，但是官方文档中并没有详细的描述。为了实现由数据更新而改变 el-checkbox 选中状态的功能，可以利用 v-model 属性。</p>
-<p>另外，当使用 el-checkbox-group 对几个 el-checkbox 进行嵌套的时候， el-checkbox 的 v-model 将会代理给 el-checkbox-group 中的 v-model ，此时对 el-checkbox 的 v-model 进行布尔赋值将不起作用，应该对 el-checkbox-group 中的 v-model 进行数组赋值。</p>
-<ul>
-<li><strong>使用 el-select 嵌套 el-options 下拉框时，选中下拉框中的一项，并没有显示到外框中。</strong></li>
-</ul>
-<p>我在开发中使用了类型与下面的代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;template slot-scope=&quot;scope1&quot;&gt;</span><br><span class="line">  &lt;el-select</span><br><span class="line">    v-if=&quot;scope1.row.edit&quot;</span><br><span class="line">    @change=&quot;handleSelectChange&quot;</span><br><span class="line">    v-model=&quot;scope1.row.tempRole&quot;</span><br><span class="line">    placeholder=&quot;请选择用户角色&quot;</span><br><span class="line">  &gt;</span><br><span class="line">    &lt;el-option</span><br><span class="line">      v-for=&quot;roleItem in roles&quot;</span><br><span class="line">      :key=&quot;roleItem.rolename&quot;</span><br><span class="line">      :label=&quot;roleItem.rolename&quot;</span><br><span class="line">      :value=&quot;roleItem.id&quot;</span><br><span class="line">    &gt;&lt;/el-option&gt;</span><br><span class="line">  &lt;/el-select&gt;</span><br><span class="line">  &lt;span v-else&gt;&#123;&#123;scope1.row.role&#125;&#125;&lt;/span&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
-<p>我是在表格中的一项使用了下拉选择，保存后隐藏，显示 <code>&lt;span&gt;</code> 中的文字，由于下拉项中的 value 是绑定了 data 中的数据，当选择 el-option 时候，slect代理没法感知变化（这是我的猜测）。因此在数据层面更新了，但是没有选中的效果，用户体验极差。</p>
-<p>解决：我想到了 vue 的 setter ，于是我尝试了对表格的其中的任意一项数据（el-select绑定的数据相关）进行动态重新添加，成功了！！！我又尝试了对 el-options 的依赖数组进行了 setter 操作，结果同样可以达到效果，但是为了避免数组变成 object 类型，我选择了第一种方式。</p>
-<p>以上的解决方式受限于笔者的水平，欢迎有更好的方式前来探讨。</p>
-<ul>
-<li><strong>试图使用树组件 el-tree 的 default-checked-keys 属性动态修改勾选状态失败。</strong></li>
-</ul>
-<p>这个失败的尝试类似于el-checkbox 复选框中的 checked ，只能用于首次勾选，并不能通过更新绑定的数据动态更新勾选状态。可以使用 vue 的 watch 监听绑定的数据，当数据更新时使用树组件的 setCheckedKeys() 或者 setCheckedNodes() 方法更新勾选项即可。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在使用 vue 的数据驱动视图的时候要注意 vue 是否能够检测到数据的更新。而在使用 UI 框架的时候同样要注意框架的组件那些属性能起到动态更新视图的效果。</p>
-<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>这是我的第一篇个人博客，还有所欠缺，但是没有我同事 jwchan 的帮助和催促，这篇博文的问世将无限期延后，在这里特别鸣谢 jwchan 对我技术上的支持。大家可以到他的个人博客中互相学习：<a href="https://jwchan.cn/" target="_blank" rel="noopener">https://jwchan.cn/</a></p>
-<p>谢谢阅读！！！</p>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/25/数据绑定与视图更新--Vue使用心得/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>

@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="JayNodes">
 <meta property="og:description" content="背景事件背景最近我们公司想要用 vue 框架来重构之前的用 angular 框架的项目，对于笔者来说是第一次接触 MVVM 模式的框架，所以花在数据绑定逻辑上的时间比较多，经过一周代码开发，渐渐熟悉了数据绑定的使用，趁着印象深刻，赶紧写一篇博文记录一下。 By the way，这是我第一篇博文，应该也没有人看的，但是还是有点小紧张，像一个小学生第一次站上讲台似的，哈哈哈。 技术背景前端使用vue（">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-25T03:16:29.678Z">
+<meta property="og:updated_time" content="2019-05-25T03:36:09.670Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据绑定与视图更新--Vue使用心得">
 <meta name="twitter:description" content="背景事件背景最近我们公司想要用 vue 框架来重构之前的用 angular 框架的项目，对于笔者来说是第一次接触 MVVM 模式的框架，所以花在数据绑定逻辑上的时间比较多，经过一周代码开发，渐渐熟悉了数据绑定的使用，趁着印象深刻，赶紧写一篇博文记录一下。 By the way，这是我第一篇博文，应该也没有人看的，但是还是有点小紧张，像一个小学生第一次站上讲台似的，哈哈哈。 技术背景前端使用vue（">
@@ -279,6 +279,23 @@
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-友链">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/links/" rel="section"><i class="menu-item-icon fa fa-fw fa-link"></i> <br>友链</a>
+
+  </li>
 
       
       
@@ -371,7 +388,7 @@
                 
               
 
-              <time title="创建时间：2019-05-25 11:14:27 / 修改时间：11:16:29" itemprop="dateCreated datePublished" datetime="2019-05-25T11:14:27+08:00">2019-05-25</time>
+              <time title="创建时间：2019-05-25 11:14:27 / 修改时间：11:36:09" itemprop="dateCreated datePublished" datetime="2019-05-25T11:14:27+08:00">2019-05-25</time>
             
 
             
@@ -418,6 +435,7 @@
 <blockquote>
 <p> Swagger 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务。</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在未使用 vue 之前，我已经知道了 vue 只要对已经和 html 标签绑定的数据进行修改，dom 对象也会随之发生视图变化。但是在第一天的开发中我遇到了数据更新但是视图没有更新的情况，在排除了数据问题之后，很明显，锅出在了数据绑定的机制上。由于使用了 Element-Ui (也是初次接触) UI 框架，数据的绑定机制多了 element-ui 的影响，使得问题更加复杂化。</p>
 <blockquote>
 <p>Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库。 <a href="https://element.eleme.cn/" target="_blank" rel="noopener">https://element.eleme.cn/</a></p>
