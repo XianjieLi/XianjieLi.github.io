@@ -96,17 +96,18 @@
 
 
 
-  <meta name="description" content="记录学习编程过程中的一些体会和总结">
+  <meta name="description" content="背景事件背景最近我们公司想要用 vue 框架来重构之前的用 angular 框架的项目，对于笔者来说是第一次接触 MVVM 模式的框架，所以花在数据绑定逻辑上的时间比较多，经过一周代码开发，渐渐熟悉了数据绑定的使用，趁着印象深刻，赶紧写一篇博文记录一下。 By the way，这是我第一篇博文，应该也没有人看的，但是还是有点小紧张，像一个小学生第一次站上讲台似的，哈哈哈。 技术背景前端使用vue（">
 <meta name="keywords" content="编程 移动开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="JayNodes">
-<meta property="og:url" content="https://xinejieli.github.io/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据绑定与视图更新--Vue使用心得">
+<meta property="og:url" content="https://xinejieli.github.io/2019/05/25/数据绑定与视图更新--Vue使用心得/index.html">
 <meta property="og:site_name" content="JayNodes">
-<meta property="og:description" content="记录学习编程过程中的一些体会和总结">
+<meta property="og:description" content="背景事件背景最近我们公司想要用 vue 框架来重构之前的用 angular 框架的项目，对于笔者来说是第一次接触 MVVM 模式的框架，所以花在数据绑定逻辑上的时间比较多，经过一周代码开发，渐渐熟悉了数据绑定的使用，趁着印象深刻，赶紧写一篇博文记录一下。 By the way，这是我第一篇博文，应该也没有人看的，但是还是有点小紧张，像一个小学生第一次站上讲台似的，哈哈哈。 技术背景前端使用vue（">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-25T03:16:29.678Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JayNodes">
-<meta name="twitter:description" content="记录学习编程过程中的一些体会和总结">
+<meta name="twitter:title" content="数据绑定与视图更新--Vue使用心得">
+<meta name="twitter:description" content="背景事件背景最近我们公司想要用 vue 框架来重构之前的用 angular 框架的项目，对于笔者来说是第一次接触 MVVM 模式的框架，所以花在数据绑定逻辑上的时间比较多，经过一周代码开发，渐渐熟悉了数据绑定的使用，趁着印象深刻，赶紧写一篇博文记录一下。 By the way，这是我第一篇博文，应该也没有人看的，但是还是有点小紧张，像一个小学生第一次站上讲台似的，哈哈哈。 技术背景前端使用vue（">
 
 
 
@@ -114,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="https://xinejieli.github.io/">
+  <link rel="canonical" href="https://xinejieli.github.io/2019/05/25/数据绑定与视图更新--Vue使用心得/">
 
 
 
@@ -124,7 +125,7 @@
   };
 </script>
 
-  <title>JayNodes</title>
+  <title>数据绑定与视图更新--Vue使用心得 | JayNodes</title>
   
 
 
@@ -172,8 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -215,7 +215,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -311,9 +311,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -345,10 +345,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/25/数据绑定与视图更新--Vue使用心得/" class="post-title-link" itemprop="url">数据绑定与视图更新--Vue使用心得</a>
+          <h1 class="post-title" itemprop="name headline">数据绑定与视图更新--Vue使用心得
+
               
             
           </h1>
@@ -412,9 +410,7 @@
       
 
       
-        
-          
-            <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h3 id="事件背景"><a href="#事件背景" class="headerlink" title="事件背景"></a>事件背景</h3><p>最近我们公司想要用 vue 框架来重构之前的用 angular 框架的项目，对于笔者来说是第一次接触 MVVM 模式的框架，所以花在数据绑定逻辑上的时间比较多，经过一周代码开发，渐渐熟悉了数据绑定的使用，趁着印象深刻，赶紧写一篇博文记录一下。 By the way，这是我第一篇博文，应该也没有人看的，但是还是有点小紧张，像一个小学生第一次站上讲台似的，哈哈哈。</p>
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h3 id="事件背景"><a href="#事件背景" class="headerlink" title="事件背景"></a>事件背景</h3><p>最近我们公司想要用 vue 框架来重构之前的用 angular 框架的项目，对于笔者来说是第一次接触 MVVM 模式的框架，所以花在数据绑定逻辑上的时间比较多，经过一周代码开发，渐渐熟悉了数据绑定的使用，趁着印象深刻，赶紧写一篇博文记录一下。 By the way，这是我第一篇博文，应该也没有人看的，但是还是有点小紧张，像一个小学生第一次站上讲台似的，哈哈哈。</p>
 <h3 id="技术背景"><a href="#技术背景" class="headerlink" title="技术背景"></a>技术背景</h3><p>前端使用vue（vuex + vue-router） + element-ui + stylus +webpack，后端使用 GO 语言编写，并用 RESTful 风格的接口交互，其中接口使用 Swagger 进行可视化展示。 </p>
 <blockquote>
 <p> REST是Representational State Transfer的缩写，它是由罗伊·菲尔丁（Roy Fielding）提出的，是用来描述创建HTTP API的标准方法的，他发现这四种常用的行为（查看（view），创建（create），编辑（edit）和删除（delete））都可以直接映射到HTTP 中已实现的GET,POST,PUT和DELETE方法。</p>
@@ -474,8 +470,6 @@
 <h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>这是我的第一篇个人博客，还有所欠缺，但是没有我同事 jwchan 的帮助和催促，这篇博文的问世将无限期延后，在这里特别鸣谢 jwchan 对我技术上的支持。大家可以到他的个人博客中互相学习：<a href="https://jwchan.cn/" target="_blank" rel="noopener">https://jwchan.cn/</a></p>
 <p>谢谢阅读！！！</p>
 
-          
-        
       
     </div>
 
@@ -498,159 +492,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xinejieli.github.io/2019/04/17/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XianjieLi">
-      <meta itemprop="description" content="记录学习编程过程中的一些体会和总结">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JayNodes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/17/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/2019/04/17/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-17 17:38:09" itemprop="dateCreated datePublished" datetime="2019-04-17T17:38:09+08:00">2019-04-17</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -660,14 +523,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -687,8 +551,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -734,6 +607,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#事件背景"><span class="nav-number">1.1.</span> <span class="nav-text">事件背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#技术背景"><span class="nav-number">1.2.</span> <span class="nav-text">技术背景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">2.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决"><span class="nav-number">3.</span> <span class="nav-text">解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-单纯使用-vue-框架时如何进行正确的数据绑定？"><span class="nav-number">3.1.</span> <span class="nav-text">1.单纯使用 vue 框架时如何进行正确的数据绑定？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-结合使用-element-ui-UI框架时在数据绑定上可能遇到的问题和注意事项？"><span class="nav-number">3.2.</span> <span class="nav-text">2. 结合使用 element-ui UI框架时在数据绑定上可能遇到的问题和注意事项？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鸣谢"><span class="nav-number">5.</span> <span class="nav-text">鸣谢</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -865,6 +755,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -880,6 +774,8 @@
 
   
 
+
+  
 
 
   
