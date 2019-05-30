@@ -120,7 +120,7 @@
 <meta property="og:site_name" content="Jay">
 <meta property="og:description" content="设计模式是一种“小框架”，即体系结构。尝试使用简短的语言描述23种设计模式。 重要原则： 针对接口编程，而不是针对实现编程。   继承产生了依赖，破坏了封装性。   优先使用对象组合，而不是类继承。（组合往往难以实现，但是易于维护，拥抱了变化）   类继承是白箱复用，对象的组合是黑箱复用。   灵活性和可变性是简单性和高性能的敌人。   不修改源码的原则。    模式介绍：注意：以下的“用户”指的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-30T07:08:20.288Z">
+<meta property="og:updated_time" content="2019-05-30T07:12:59.241Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《设计模式-可复用面向对象软件的基础》简单概括">
 <meta name="twitter:description" content="设计模式是一种“小框架”，即体系结构。尝试使用简短的语言描述23种设计模式。 重要原则： 针对接口编程，而不是针对实现编程。   继承产生了依赖，破坏了封装性。   优先使用对象组合，而不是类继承。（组合往往难以实现，但是易于维护，拥抱了变化）   类继承是白箱复用，对象的组合是黑箱复用。   灵活性和可变性是简单性和高性能的敌人。   不修改源码的原则。    模式介绍：注意：以下的“用户”指的">
@@ -404,7 +404,7 @@
                 
               
 
-              <time title="创建时间：2019-05-30 14:58:31 / 修改时间：15:08:20" itemprop="dateCreated datePublished" datetime="2019-05-30T14:58:31+08:00">2019-05-30</time>
+              <time title="创建时间：2019-05-30 14:58:31 / 修改时间：15:12:59" itemprop="dateCreated datePublished" datetime="2019-05-30T14:58:31+08:00">2019-05-30</time>
             
 
             
@@ -480,7 +480,8 @@
 <h2 id="模式介绍："><a href="#模式介绍：" class="headerlink" title="模式介绍："></a>模式介绍：</h2><p><em>注意：以下的“用户”指的是使用对象的程序员，并非最终使用应用的用户。</em><br><a id="more"></a></p>
 <h3 id="创建型模式（通常从工厂办法开始，后面重构）："><a href="#创建型模式（通常从工厂办法开始，后面重构）：" class="headerlink" title="创建型模式（通常从工厂办法开始，后面重构）："></a>创建型模式（通常从工厂办法开始，后面重构）：</h3><ul>
 <li><strong>抽象工厂（abstract factory）：</strong><br>用户不直接创建一个产品对象，而是通过一个工厂对象间接创建。（用户与实际实现分离）  </li>
-<li><strong>生成器（builder）：</strong><br>通过生成器一步步生成一个复杂产品对象。（生成器中维护一个产品对象，一直对产品进行升级，最后返回）<br><strong>工厂办法（factory method）：</strong><br>用户通过工厂办法实例化产品对象。（抽象工厂也是使用工厂办法实例产品对象的）</li>
+<li><strong>生成器（builder）：</strong><br>通过生成器一步步生成一个复杂产品对象。（生成器中维护一个产品对象，一直对产品进行升级，最后返回）  </li>
+<li><strong>工厂办法（factory method）：</strong><br>用户通过工厂办法实例化产品对象。（抽象工厂也是使用工厂办法实例产品对象的）</li>
 <li><strong>原型（prototype）：</strong><br>每个对象都实现了clone方法，调用对象的clone就可以深拷贝出新的对象，同时可以通过参数自定义  </li>
 <li><strong>单例（singleon）：</strong><br>一个类只有一个对象，并通过类方法获取到对象，实现对数据状态的共享。（全局变量）</li>
 </ul>
