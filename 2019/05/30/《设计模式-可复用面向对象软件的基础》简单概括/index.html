@@ -112,17 +112,18 @@
 
 
 
-  <meta name="description" content="记录学习编程过程中的一些体会和总结">
-<meta name="keywords" content="编程 移动开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jay">
-<meta property="og:url" content="https://xinejieli.github.io/index.html">
+  <meta name="description" content="设计模式是一种“小框架”，即体系结构。尝试使用简短的语言描述23种设计模式。 重要原则： 针对接口编程，而不是针对实现编程。   继承产生了依赖，破坏了封装性。   优先使用对象组合，而不是类继承。（组合往往难以实现，但是易于维护，拥抱了变化）   类继承是白箱复用，对象的组合是黑箱复用。   灵活性和可变性是简单性和高性能的敌人。   不修改源码的原则。    模式介绍：注意：以下的“用户”指的">
+<meta name="keywords" content="设计模式,书籍,读书笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《设计模式-可复用面向对象软件的基础》简单概括">
+<meta property="og:url" content="https://xinejieli.github.io/2019/05/30/《设计模式-可复用面向对象软件的基础》简单概括/index.html">
 <meta property="og:site_name" content="Jay">
-<meta property="og:description" content="记录学习编程过程中的一些体会和总结">
+<meta property="og:description" content="设计模式是一种“小框架”，即体系结构。尝试使用简短的语言描述23种设计模式。 重要原则： 针对接口编程，而不是针对实现编程。   继承产生了依赖，破坏了封装性。   优先使用对象组合，而不是类继承。（组合往往难以实现，但是易于维护，拥抱了变化）   类继承是白箱复用，对象的组合是黑箱复用。   灵活性和可变性是简单性和高性能的敌人。   不修改源码的原则。    模式介绍：注意：以下的“用户”指的">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-30T07:08:20.288Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jay">
-<meta name="twitter:description" content="记录学习编程过程中的一些体会和总结">
+<meta name="twitter:title" content="《设计模式-可复用面向对象软件的基础》简单概括">
+<meta name="twitter:description" content="设计模式是一种“小框架”，即体系结构。尝试使用简短的语言描述23种设计模式。 重要原则： 针对接口编程，而不是针对实现编程。   继承产生了依赖，破坏了封装性。   优先使用对象组合，而不是类继承。（组合往往难以实现，但是易于维护，拥抱了变化）   类继承是白箱复用，对象的组合是黑箱复用。   灵活性和可变性是简单性和高性能的敌人。   不修改源码的原则。    模式介绍：注意：以下的“用户”指的">
 
 
 
@@ -130,7 +131,7 @@
 
   
   
-  <link rel="canonical" href="https://xinejieli.github.io/">
+  <link rel="canonical" href="https://xinejieli.github.io/2019/05/30/《设计模式-可复用面向对象软件的基础》简单概括/">
 
 
 
@@ -140,7 +141,7 @@
   };
 </script>
 
-  <title>Jay</title>
+  <title>《设计模式-可复用面向对象软件的基础》简单概括 | Jay</title>
   
 
 
@@ -188,8 +189,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
     <a style="float:right;border-bottom:none;" href="https://github.com/xianjieli"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_green_007200.png?resize=149%2C149" class="attachment-full size-full " alt="Fork me on GitHub" data-recalc-dims="1"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -231,7 +231,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -344,9 +344,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -378,10 +378,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/30/《设计模式-可复用面向对象软件的基础》简单概括/" class="post-title-link" itemprop="url">《设计模式-可复用面向对象软件的基础》简单概括</a>
+          <h1 class="post-title" itemprop="name headline">《设计模式-可复用面向对象软件的基础》简单概括
+
               
             
           </h1>
@@ -445,6 +443,13 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
           
 
@@ -463,8 +468,7 @@
       
 
       
-        
-          <p>设计模式是一种“小框架”，即体系结构。尝试使用简短的语言描述23种设计模式。</p>
+        <p>设计模式是一种“小框架”，即体系结构。尝试使用简短的语言描述23种设计模式。</p>
 <h2 id="重要原则："><a href="#重要原则：" class="headerlink" title="重要原则："></a>重要原则：</h2><ul>
 <li>针对接口编程，而不是针对实现编程。  </li>
 <li>继承产生了依赖，破坏了封装性。  </li>
@@ -473,19 +477,38 @@
 <li>灵活性和可变性是简单性和高性能的敌人。  </li>
 <li>不修改源码的原则。  </li>
 </ul>
-<h2 id="模式介绍："><a href="#模式介绍：" class="headerlink" title="模式介绍："></a>模式介绍：</h2><p><em>注意：以下的“用户”指的是使用对象的程序员，并非最终使用应用的用户。</em><br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/30/《设计模式-可复用面向对象软件的基础》简单概括/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+<h2 id="模式介绍："><a href="#模式介绍：" class="headerlink" title="模式介绍："></a>模式介绍：</h2><p><em>注意：以下的“用户”指的是使用对象的程序员，并非最终使用应用的用户。</em><br><a id="more"></a></p>
+<h3 id="创建型模式（通常从工厂办法开始，后面重构）："><a href="#创建型模式（通常从工厂办法开始，后面重构）：" class="headerlink" title="创建型模式（通常从工厂办法开始，后面重构）："></a>创建型模式（通常从工厂办法开始，后面重构）：</h3><ul>
+<li><strong>抽象工厂（abstract factory）：</strong><br>用户不直接创建一个产品对象，而是通过一个工厂对象间接创建。（用户与实际实现分离）  </li>
+<li><strong>生成器（builder）：</strong><br>通过生成器一步步生成一个复杂产品对象。（生成器中维护一个产品对象，一直对产品进行升级，最后返回）<br><strong>工厂办法（factory method）：</strong><br>用户通过工厂办法实例化产品对象。（抽象工厂也是使用工厂办法实例产品对象的）</li>
+<li><strong>原型（prototype）：</strong><br>每个对象都实现了clone方法，调用对象的clone就可以深拷贝出新的对象，同时可以通过参数自定义  </li>
+<li><strong>单例（singleon）：</strong><br>一个类只有一个对象，并通过类方法获取到对象，实现对数据状态的共享。（全局变量）</li>
+</ul>
+<h3 id="结构型模式："><a href="#结构型模式：" class="headerlink" title="结构型模式："></a>结构型模式：</h3><ul>
+<li><strong>适配器（adapter）：</strong><br>已经有了两种接口的类，但是用户希望使用同一个的方式使用，在不改类源码的基础上对一个者类进行包装，让它表现出另一种类的接口，这个包装类就是适配器。（可以类比不同国家的插座，用户是用电器）  </li>
+<li><strong>桥接（bridge）：</strong><br>将若干类聚合在一个桥接类中，小类可以单独发展，不影响桥接类。（多继承改成聚合，和适配器模式是在生命的不同周期的不同叫法）  </li>
+<li><strong>组合（composite）：</strong><br>使用递归的方式实现树形结构，在一个对象中包含相同类实例的对象  </li>
+<li><strong>装饰（decorator）：</strong><br>在不影响原本类的基础上，对一个实例对象动态增加功能。（将对象传给装饰类（和原类有同样的接口），并实例出新的对象）  </li>
+<li><strong>外观（facade）：</strong><br>基金是股票的外观，通过高级接口封装子系统。  </li>
+<li><strong>享元（flyweight）：</strong><br>为了防止对象过多，可以共享细粒度的对象（类似String常量池）  </li>
+<li><strong>代理（proxy）：</strong><br>代理一个对象的访问，类似于适配器模式，不过代理是主动设计，适配器是事后补救。（保护对象，解耦）  </li>
+</ul>
+<h3 id="行为型模式："><a href="#行为型模式：" class="headerlink" title="行为型模式："></a>行为型模式：</h3><ul>
+<li><strong>职责链（chain of responsibility）：</strong><br>每个对象中有下一个级别的对象，当用户的一个调用目前的对象无法满足的时候会调用下一个对象，形成了一条一直测试能否执行的链，直到被解决或者到了最后一个。（用户的调用不能保证处理，有关部门的感觉）  </li>
+<li><strong>命令（command）：</strong><br>用户的请求是一个命令对象，将命令提交给处理的对象，然后对命令进行队列处理，类似事务（增加，删除）。（餐厅：一般的请求类似于喊一句老板给我来碗面，而命令模式类似于给老板一张勾选好的菜单）  </li>
+<li><strong>解释器（interpreter）：</strong><br>定义一个翻译器，将用户的请求翻译成明确的行为  </li>
+<li><strong>迭代器（iterator）：</strong><br>一个对象内部聚合了多个对象，使用暴露出来的方法顺序访问内部对象（多种遍历方式）。类似于一个next()方法。（游标的感觉）</li>
+<li><strong>中介者（mediator）：</strong><br>转发者，各个对象不必相互引用，只需要引用相同的中介者，由中介者转发操作。（降低了耦合）  </li>
+<li><strong>备忘录（memento）：</strong><br>将对象中的状态属性复制成一个备忘录对象，并交给负责人对象保存，如果需要恢复就从负责人那里获取（类似于悔棋，撤回等操作，相比直接存储整个对象，使用备忘录存比较经济）  </li>
+<li><strong>观察者（observer）：</strong><br>订阅或者依赖关系，当发布者发布了新的内容，订阅者都响应操作。实现：发布者维护一个订阅者列表，当发布者发布涉及订阅者的内容时，使用订阅者引用调用响应的方法。 </li>
+<li><strong>状态（state）： </strong><br>为对象设置不同的状态，当用户调用相同的方法时，表现出来的效果依赖当前对象的状态。（类似于王者荣耀中的移动，当不同状态下：受控，疾跑等，移动速度不同）</li>
+<li><strong>策略（strategy）：</strong><br>将算法封装成对象使用，使得算法可以发展可以更换  </li>
+<li><strong>模板办法（template method）：</strong><br>父类只是骨架，子类继承实现不同的行为  </li>
+<li><strong>访问者（visitor）：</strong><br>对象写一个固定方法（参数为访问者），并调用访问者（对象作为参数）。这样，在访问者中就可以访问原对象中的方法了。如果需求有变化，只需要修改访问者即可。  </li>
+</ul>
+
       
-    </p></div>
+    </div>
 
     
 
@@ -504,382 +527,50 @@
 
     <div>
       
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------　　　　本文结束　<i class="fa fa-heart"></i>　感谢您的阅读　　　　-------------</div>
+    
+</div>
+      
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xinejieli.github.io/2019/05/25/数据绑定与视图更新--Vue使用心得/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XianjieLi">
-      <meta itemprop="description" content="记录学习编程过程中的一些体会和总结">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jay">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/25/数据绑定与视图更新--Vue使用心得/" class="post-title-link" itemprop="url">数据绑定与视图更新--Vue使用心得</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-25 11:14:27" itemprop="dateCreated datePublished" datetime="2019-05-25T11:14:27+08:00">2019-05-25</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-27 15:52:26" itemprop="dateModified" datetime="2019-05-27T15:52:26+08:00">2019-05-27</time>
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/设计模式/" rel="tag"># 设计模式</a>
           
-
+            <a href="/tags/书籍/" rel="tag"># 书籍</a>
           
-            
-            
+            <a href="/tags/读书笔记/" rel="tag"># 读书笔记</a>
           
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h3 id="事件背景"><a href="#事件背景" class="headerlink" title="事件背景"></a>事件背景</h3><p>最近我们公司想要用 vue 框架来重构之前的用 angular 框架的项目，对于笔者来说是第一次接触 MVVM 模式的框架，所以花在数据绑定逻辑上的时间比较多，经过一周代码开发，渐渐熟悉了数据绑定的使用，趁着印象深刻，赶紧写一篇博文记录一下。 By the way，这是我第一篇博文，应该也没有人看的，但是还是有点小紧张，像一个小学生第一次站上讲台似的，哈哈哈。</p>
-<h3 id="技术背景"><a href="#技术背景" class="headerlink" title="技术背景"></a>技术背景</h3><p>前端使用vue（vuex + vue-router） + element-ui + stylus +webpack，后端使用 GO 语言编写，并用 RESTful 风格的接口交互，其中接口使用 Swagger 进行可视化展示。 </p>
-<blockquote>
-<p> REST是Representational State Transfer的缩写，它是由罗伊·菲尔丁（Roy Fielding）提出的，是用来描述创建HTTP API的标准方法的，他发现这四种常用的行为（查看（view），创建（create），编辑（edit）和删除（delete））都可以直接映射到HTTP 中已实现的GET,POST,PUT和DELETE方法。</p>
-</blockquote>
-<blockquote>
-<p> Swagger 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务。</p>
-</blockquote>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/25/数据绑定与视图更新--Vue使用心得/#more" rel="contents">
-                阅读全文 &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/25/数据绑定与视图更新--Vue使用心得/" rel="next" title="数据绑定与视图更新--Vue使用心得">
+                <i class="fa fa-chevron-left"></i> 数据绑定与视图更新--Vue使用心得
               </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xinejieli.github.io/2019/04/17/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XianjieLi">
-      <meta itemprop="description" content="记录学习编程过程中的一些体会和总结">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jay">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/17/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
             
-          </h1>
-        
+          </div>
 
-        <div class="post-meta">
-          <span class="post-time">
+          <span class="post-nav-divider"></span>
 
+          <div class="post-nav-prev post-nav-item">
             
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-17 17:38:09" itemprop="dateCreated datePublished" datetime="2019-04-17T17:38:09+08:00">2019-04-17</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-27 15:41:50" itemprop="dateModified" datetime="2019-05-27T15:41:50+08:00">2019-05-27</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -889,14 +580,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -916,8 +608,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1011,6 +712,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#重要原则："><span class="nav-number">1.</span> <span class="nav-text">重要原则：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模式介绍："><span class="nav-number">2.</span> <span class="nav-text">模式介绍：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建型模式（通常从工厂办法开始，后面重构）："><span class="nav-number">2.1.</span> <span class="nav-text">创建型模式（通常从工厂办法开始，后面重构）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结构型模式："><span class="nav-number">2.2.</span> <span class="nav-text">结构型模式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#行为型模式："><span class="nav-number">2.3.</span> <span class="nav-text">行为型模式：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1192,6 +910,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -1207,6 +929,8 @@
 
   
 
+
+  
 
 
   
